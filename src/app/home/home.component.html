@@ -1,0 +1,89 @@
+<!-- <div class="grid-container">
+  <h1 class="mat-h1">Home</h1>
+  <mat-grid-list cols="2" rowHeight="250px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+
+            <mat-menu #menu="matMenu" xPosition="before">
+
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div class="grid-container" *ngFor="let product of products">
+  <mat-grid-list cols="2" rowHeight="250px" >
+    <mat-grid-tile *ngFor="let cards of card | async" [colspan]="cards.cols" [rowspan]="cards.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{product.productName}}
+
+            <mat-menu #menu="matMenu" xPosition="before">
+
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content" >
+          <img src="../../assets/images/j.jpg" alt="dont be silly" height="154px" width="354px" style="float: left;">
+          <button mat-button color="success" style="color:rgb(49, 52, 66); background-color: rgb(221, 224, 24); font-weight: bold; font-size:large;">Add to cart</button>
+
+          {{product.Price}}
+          {{product.Description}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div> -->
+<div class="grid-container">
+  <h1 class="mat-h1">Home</h1>
+  <mat-grid-list cols="2" rowHeight="250px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+
+            <mat-menu #menu="matMenu" xPosition="before">
+
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
+    <mat-card class="mat-elevation-z4" >
+      <mat-card-header>
+        <mat-card-title>{{product.productName}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="../../assets/images/h.jpg" alt="dont be silly">
+      <mat-card-content>
+        <p>
+          {{product.Description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>{{product.Price}}</button>
+
+        <button mat-button color="success" style="color:rgb(49, 52, 66); background-color: rgb(221, 224, 24); font-weight: bold; font-size:large;" (click)="view(product)">Buy </button>
+
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

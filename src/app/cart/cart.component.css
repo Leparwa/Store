@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  background-color: darkslategrey;
+}
+.tableContent {
+  background-color: aquamarine; margin-top: 3%;
+  width: 60vw;
+  margin: 1vw;
+  margin-left: 10%;
+
+}
+.cartContent{
+ background-color: dimgray;
+margin-right: 2%;
+
+ margin-left: 15%;
+
+}
